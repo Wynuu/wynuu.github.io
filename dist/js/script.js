@@ -56,3 +56,13 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
 } else {
   darkToggle.checked = false;
 }
+
+// Portfolio image expansion
+const portfolioImages = document.querySelectorAll('.portfolio-img');
+
+portfolioImages.forEach(img => {
+  img.addEventListener('click', function() {
+    const relativeContainer = this.closest('.relative');
+    relativeContainer.classList.toggle('expanded');
+  });
+});

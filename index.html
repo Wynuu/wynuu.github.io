@@ -13,6 +13,180 @@
         document.documentElement.classList.remove('dark');
       }
     </script>
+    <style>
+      @keyframes typewriterName {
+        0% {
+          width: 0;
+          opacity: 1;
+        }
+        99% {
+          opacity: 1;
+        }
+        100% {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+      @keyframes imagNeonGlow {
+        0%, 100% {
+          filter: drop-shadow(0 0 10px #14b8a6) drop-shadow(0 0 20px rgba(20, 184, 166, 0.5));
+        }
+        50% {
+          filter: drop-shadow(0 0 20px #14b8a6) drop-shadow(0 0 40px #14b8a6);
+        }
+      }
+      @keyframes scrollFollowDots {
+        from {
+          opacity: 0;
+          transform: scaleY(0);
+        }
+        to {
+          opacity: 1;
+          transform: scaleY(1);
+        }
+      }
+      .logo-neon {
+        color: #14b8a6;
+      }
+      .typewriter-name {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typewriterName 3s steps(18, end) infinite;
+        max-width: 100%;
+      }
+      @keyframes techBadgeSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes badgeFloat {
+        0%, 100% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+        50% {
+          transform: translateY(-8px);
+          opacity: 0.9;
+        }
+      }
+      @keyframes badgeRotate {
+        0% {
+          transform: rotateZ(0deg) scale(1);
+        }
+        50% {
+          transform: rotateZ(5deg) scale(1.05);
+        }
+        100% {
+          transform: rotateZ(0deg) scale(1);
+        }
+      }
+      @keyframes textboxNeonGlow {
+        0%, 100% {
+          box-shadow: 0 0 5px rgba(20, 184, 166, 0.5), 0 0 10px rgba(20, 184, 166, 0.3);
+        }
+        50% {
+          box-shadow: 0 0 15px rgba(20, 184, 166, 0.8), 0 0 25px rgba(20, 184, 166, 0.5);
+        }
+      }
+      .textbox-neon {
+        animation: textboxNeonGlow 2s ease-in-out infinite;
+      }
+      .tech-badge {
+        animation: techBadgeSlideIn 0.6s ease-out forwards;
+        opacity: 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .tech-badge:nth-child(1) { animation-delay: 0.1s; }
+      .tech-badge:nth-child(2) { animation-delay: 0.2s; }
+      .tech-badge:nth-child(3) { animation-delay: 0.3s; }
+      .tech-badge:nth-child(4) { animation-delay: 0.4s; }
+      .tech-badge:nth-child(5) { animation-delay: 0.5s; }
+      .tech-badge:nth-child(6) { animation-delay: 0.6s; }
+      .tech-badge:nth-child(7) { animation-delay: 0.7s; }
+      .tech-badge:nth-child(8) { animation-delay: 0.8s; }
+      .tech-badge:hover {
+        animation: badgeFloat 1.5s ease-in-out infinite;
+      }
+      .profile-img {
+        animation: imagNeonGlow 2.5s ease-in-out infinite;
+      }
+      .timeline-dot-glow {
+        animation: scrollFollowDots 0.6s ease-out forwards;
+      }
+      @keyframes neonCardGlow1 {
+        0%, 100% {
+          filter: drop-shadow(0 0 8px #ff00ff) drop-shadow(0 0 16px rgba(255, 0, 255, 0.5));
+        }
+        50% {
+          filter: drop-shadow(0 0 15px #ff00ff) drop-shadow(0 0 30px #ff00ff);
+        }
+      }
+      @keyframes neonCardGlow2 {
+        0%, 100% {
+          filter: drop-shadow(0 0 8px #00ffff) drop-shadow(0 0 16px rgba(0, 255, 255, 0.5));
+        }
+        50% {
+          filter: drop-shadow(0 0 15px #00ffff) drop-shadow(0 0 30px #00ffff);
+        }
+      }
+      @keyframes neonCardGlow3 {
+        0%, 100% {
+          filter: drop-shadow(0 0 8px #00ff00) drop-shadow(0 0 16px rgba(0, 255, 0, 0.5));
+        }
+        50% {
+          filter: drop-shadow(0 0 15px #00ff00) drop-shadow(0 0 30px #00ff00);
+        }
+      }
+      @keyframes neonCardGlow4 {
+        0%, 100% {
+          filter: drop-shadow(0 0 8px #ffff00) drop-shadow(0 0 16px rgba(255, 255, 0, 0.5));
+        }
+        50% {
+          filter: drop-shadow(0 0 15px #ffff00) drop-shadow(0 0 30px #ffff00);
+        }
+      }
+      @keyframes neonCardGlow5 {
+        0%, 100% {
+          filter: drop-shadow(0 0 8px #ff6600) drop-shadow(0 0 16px rgba(255, 102, 0, 0.5));
+        }
+        50% {
+          filter: drop-shadow(0 0 15px #ff6600) drop-shadow(0 0 30px #ff6600);
+        }
+      }
+      @keyframes neonCardGlow6 {
+        0%, 100% {
+          filter: drop-shadow(0 0 8px #ff00aa) drop-shadow(0 0 16px rgba(255, 0, 170, 0.5));
+        }
+        50% {
+          filter: drop-shadow(0 0 15px #ff00aa) drop-shadow(0 0 30px #ff00aa);
+        }
+      }
+      .portfolio-card:nth-child(1) {
+        animation: neonCardGlow1 2s ease-in-out infinite;
+      }
+      .portfolio-card:nth-child(2) {
+        animation: neonCardGlow2 2s ease-in-out infinite;
+      }
+      .portfolio-card:nth-child(3) {
+        animation: neonCardGlow3 2s ease-in-out infinite;
+      }
+      .portfolio-card:nth-child(4) {
+        animation: neonCardGlow4 2s ease-in-out infinite;
+      }
+      .portfolio-card:nth-child(5) {
+        animation: neonCardGlow5 2s ease-in-out infinite;
+      }
+      .portfolio-card:nth-child(6) {
+        animation: neonCardGlow6 2s ease-in-out infinite;
+      }
+    </style>
   </head>
   <body>
     <!-- Header Start -->
@@ -20,7 +194,7 @@
       <div class="container">
         <div class="relative flex items-center justify-between">
           <div class="px-4">
-            <a href="#home" class="block py-6 text-lg font-bold text-primary">Winoajiepradana</a>
+            <a href="#home" class="block py-6 text-lg font-bold text-primary logo-neon">Winoajiepradana</a>
           </div>
           <div class="flex items-center px-4">
             <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
@@ -74,21 +248,25 @@
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
-            <h1 class="text-base font-semibold text-primary md:text-xl">Hi! All 👋, saya <span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl">Muhammad Arwino A. Pradana</span></h1>
-            <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">Nothing lasts forever, <span class="text-dark dark:text-white"> We can change the future</span></h2>
+            <h1 class="text-base font-semibold text-primary md:text-xl">Hi! All 👋, saya</h1>
+            <div class="mt-1 block">
+              <span class="text-4xl font-bold text-dark dark:text-white lg:text-5xl typewriter-name">Muhammad Arwino</span>
+              <span class="block text-4xl font-bold text-dark dark:text-white lg:text-5xl">A. Pradana</span>
+            </div>
+            <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">Officer, Adm, Tech, Opr Supply Chain departement at PT Indah Kiat Pulp & Paper Tbk (APP Sinarmas Indonesia)<span class="text-dark dark:text-white"> </span></h2>
             <p class="mb-10 font-medium leading-relaxed text-secondary">Official web <span class="font-bold text-dark dark:text-white">portfolio</span></p>
 
             <a href="https://t.me/winuajiepradana"
             target="_blank"
             class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Hubungi Saya</a>
-            <a href="mailto:arwhyno27@gmail.com"
+            <a href="https://www.linkedin.com/in/muhammad-arwino-ajie-pradana-98184a395 "
             target="_blank"
             class="mb-10 rounded-full bg-primary py-3 px-4 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">📩</a>
           
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
             <div class="relative mt-10 lg:right-0 lg:mt-9">
-              <img src="dist/img/sandhika.png" alt="Sandhika Galih" class="relative z-10 mx-auto max-w-full" />
+              <img src="dist/img/sandhika.png" alt="Sandhika Galih" class="relative z-10 mx-auto max-w-full profile-img rounded-full" />
               <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
                 <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -107,19 +285,361 @@
 
     <!-- About Section Start -->
     <section id="about" class="pt-36 pb-32 dark:bg-dark">
+      <style>
+        @keyframes slideInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes slideInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        @keyframes slideInRight {
+          from {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        @keyframes neonGlow {
+          0%, 100% {
+            box-shadow: 0 0 10px #14b8a6, 0 0 20px #14b8a6, 0 0 30px rgba(20, 184, 166, 0.5);
+          }
+          50% {
+            box-shadow: 0 0 20px #14b8a6, 0 0 30px #14b8a6, 0 0 50px rgba(20, 184, 166, 0.7);
+          }
+        }
+        @keyframes neonGlowPurple {
+          0%, 100% {
+            box-shadow: 0 0 10px #a855f7, 0 0 20px #a855f7, 0 0 30px rgba(168, 85, 247, 0.5);
+          }
+          50% {
+            box-shadow: 0 0 20px #a855f7, 0 0 30px #a855f7, 0 0 50px rgba(168, 85, 247, 0.7);
+          }
+        }
+        @keyframes neonGlowBlue {
+          0%, 100% {
+            box-shadow: 0 0 10px #0ea5e9, 0 0 20px #0ea5e9, 0 0 30px rgba(14, 165, 233, 0.5);
+          }
+          50% {
+            box-shadow: 0 0 20px #0ea5e9, 0 0 30px #0ea5e9, 0 0 50px rgba(14, 165, 233, 0.7);
+          }
+        }
+        @keyframes timelineDotPulse {
+          0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 0 10px #14b8a6;
+          }
+          50% {
+            transform: scale(1.2);
+            box-shadow: 0 0 20px #14b8a6, 0 0 30px #14b8a6, inset 0 0 10px rgba(20, 184, 166, 0.5);
+          }
+        }
+        @keyframes dotMoveDown {
+          from {
+            opacity: 0.5;
+            transform: translateY(-20px) scale(0.8);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+        @keyframes lineSlideDown {
+          from {
+            height: 0;
+            opacity: 0;
+          }
+          to {
+            height: 80px;
+            opacity: 1;
+          }
+        }
+        @keyframes cardSlideIn {
+          from {
+            opacity: 0;
+            transform: scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        .neon-card {
+          animation: neonGlow 2s ease-in-out infinite;
+        }
+        .neon-card-purple {
+          animation: neonGlowPurple 2s ease-in-out infinite;
+        }
+        .neon-card-blue {
+          animation: neonGlowBlue 2s ease-in-out infinite;
+        }
+        .timeline-dot-pulse {
+          animation: timelineDotPulse 2s ease-in-out infinite;
+        }
+        .timeline-line {
+          animation: lineSlideDown 1s ease-out forwards;
+        }
+        .timeline-line:nth-child(2) {
+          animation-delay: 0.3s;
+        }
+        .card-appear {
+          animation: cardSlideIn 0.6s ease-out forwards;
+          opacity: 0;
+        }
+        .card-appear:nth-child(1) {
+          animation-delay: 0.5s;
+        }
+        .card-appear:nth-child(2) {
+          animation-delay: 0.8s;
+        }
+        .card-appear:nth-child(3) {
+          animation-delay: 1.1s;
+        }
+        @keyframes pulse-glow {
+          0%, 100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.05);
+          }
+        }
+        .animate-in {
+          animation: slideInUp 0.6s ease-out forwards;
+        }
+        .animate-in-left {
+          animation: slideInLeft 0.6s ease-out forwards;
+        }
+        .animate-in-right {
+          animation: slideInRight 0.6s ease-out forwards;
+        }
+        .tech-badge {
+          animation: slideInUp 0.6s ease-out forwards;
+          opacity: 0;
+        }
+        .tech-badge:nth-child(1) { animation-delay: 0.1s; }
+        .tech-badge:nth-child(2) { animation-delay: 0.15s; }
+        .tech-badge:nth-child(3) { animation-delay: 0.2s; }
+        .tech-badge:nth-child(4) { animation-delay: 0.25s; }
+        .tech-badge:nth-child(5) { animation-delay: 0.3s; }
+        .tech-badge:nth-child(6) { animation-delay: 0.35s; }
+        .tech-badge:nth-child(7) { animation-delay: 0.4s; }
+        .tech-badge:nth-child(8) { animation-delay: 0.45s; }
+        .timeline-item {
+          animation: slideInLeft 0.6s ease-out forwards;
+          opacity: 0;
+        }
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.5s; }
+        .timeline-dot {
+          animation: pulse-glow 2s ease-in-out infinite;
+        }
+        .timeline-dot-scroll {
+          animation: dotMoveDown 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+          position: relative;
+        }
+      </style>
+      <script>
+        // Timeline dots scroll animation yang lebih kuat
+        document.addEventListener('DOMContentLoaded', function() {
+          const timelineItems = document.querySelectorAll('.timeline-item');
+          
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+              if (entry.isIntersecting) {
+                const dot = entry.target.querySelector('.timeline-dot-pulse');
+                if (dot) {
+                  // Reset animation
+                  dot.style.animation = 'none';
+                  setTimeout(() => {
+                    const delay = index * 0.3;
+                    dot.style.animation = `dotMoveDown 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) ${delay}s forwards`;
+                  }, 10);
+                }
+              }
+            });
+          }, { threshold: 0.5 });
+          
+          timelineItems.forEach((item, index) => {
+            item.dataset.timelineIndex = index;
+            observer.observe(item);
+          });
+        });
+      </script>
       <div class="container">
-        <div class="flex flex-wrap">
-          <div class="mb-10 w-full px-4 lg:w-1/2">
-            <h4 class="mb-3 text-lg font-bold uppercase text-primary">Tentang Saya</h4>
-            <h2 class="mb-5 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl">Pendidikan & Pekerjaan</h2>
-            <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">Saat ini saya aktif sebagai mahasiswa di Universitas Pamulang, Serang Banten & bekerja di PT Indah Kiat Pulp and Paper, Serang Banten divisi Supply Chain.</p>
+        <!-- Section Header -->
+        <div class="mb-16 text-center animate-in">
+          <h4 class="mb-3 text-lg font-bold uppercase text-primary">Tentang Saya</h4>
+          <h2 class="mb-5 text-3xl font-bold text-dark dark:text-white lg:text-4xl">Pendidikan, Keahlian & Pengalaman Kerja</h2>
+        </div>
+
+        <!-- Education Section -->
+        <div class="mb-20">
+          <h3 class="mb-8 text-2xl font-bold text-dark dark:text-white">🎓 Pendidikan</h3>
+          <div class="grid grid-cols-1 md:grid-cols-1 gap-6 animate-in-left">
+            <div class="rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 hover:shadow-lg transition-all duration-300 neon-card-blue">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0">
+                  <img src="dist/img/unpam-logo.png" alt="Universitas Pamulang" class="h-12 w-12 rounded-lg object-cover" />
+                </div>
+                <div class="flex-grow">
+                  <h4 class="text-lg font-bold text-dark dark:text-white">S1 Sistem Informasi</h4>
+                  <p class="text-primary font-semibold">Universitas Pamulang, Serang</p>
+                  <p class="text-sm text-secondary dark:text-slate-400 mt-1">Fakultas Ilmu Komputer • Program Studi Sistem Informasi</p>
+                  <p class="text-sm text-secondary dark:text-slate-400 mt-2">Fokus pada pengembangan sistem informasi dan teknologi terkini dengan pemahaman mendalam tentang algoritma dan pemrograman.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="w-full px-4 lg:w-1/2">
-            <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">Lebih dekat / berteman</h3>
-            <p class="mb-6 text-base font-medium text-secondary lg:text-lg">
-              Mari saling follow dengan klik sosial media dibawah & saya sangat terbuka untuk memulai atau membuat projek baru bersama.
-            </p>
-            <div class="flex items-center">
+        </div>
+
+        <!-- Tech Stack Section -->
+        <div class="mb-20">
+          <h3 class="mb-8 text-2xl font-bold text-dark dark:text-white">🛠️ Tech Stack & Keahlian</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="tech-badge inline-block px-4 py-2 rounded-full text-sm font-medium bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 border border-blue-300 dark:border-blue-700 hover:shadow-lg transition-all cursor-default">HTML</span>
+            <span class="tech-badge inline-block px-4 py-2 rounded-full text-sm font-medium bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 border border-yellow-300 dark:border-yellow-700 hover:shadow-lg transition-all cursor-default">JavaScript</span>
+            <span class="tech-badge inline-block px-4 py-2 rounded-full text-sm font-medium bg-sky-100 dark:bg-sky-900 text-sky-700 dark:text-sky-300 border border-sky-300 dark:border-sky-700 hover:shadow-lg transition-all cursor-default">Tailwind CSS</span>
+            <span class="tech-badge inline-block px-4 py-2 rounded-full text-sm font-medium bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300 border border-orange-300 dark:border-orange-700 hover:shadow-lg transition-all cursor-default">Java</span>
+            <span class="tech-badge inline-block px-4 py-2 rounded-full text-sm font-medium bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 border border-green-300 dark:border-green-700 hover:shadow-lg transition-all cursor-default">SAP ERP</span>
+            <span class="tech-badge inline-block px-4 py-2 rounded-full text-sm font-medium bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-700 hover:shadow-lg transition-all cursor-default">SAP BW</span>
+            <span class="tech-badge inline-block px-4 py-2 rounded-full text-sm font-medium bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 border border-indigo-300 dark:border-indigo-700 hover:shadow-lg transition-all cursor-default">Database</span>
+            <span class="tech-badge inline-block px-4 py-2 rounded-full text-sm font-medium bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 border border-red-300 dark:border-red-700 hover:shadow-lg transition-all cursor-default">Quality Control</span>
+          </div>
+        </div>
+
+        <!-- Experience Timeline -->
+        <div class="mb-20">
+          <h3 class="mb-8 text-2xl font-bold text-dark dark:text-white">💼 Pengalaman Kerja</h3>
+          <div class="space-y-8">
+            <!-- Current Position -->
+            <div class="timeline-item card-appear">
+              <div class="flex gap-6">
+                <div class="flex flex-col items-center">
+                  <div class="timeline-dot-pulse h-4 w-4 rounded-full bg-primary"></div>
+                  <div class="timeline-line h-20 w-1 bg-gradient-to-b from-primary to-transparent mt-2"></div>
+                </div>
+                <div class="flex-grow pb-8">
+                  <div class="rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 hover:shadow-lg transition-all duration-300 neon-card">
+                    <div class="flex justify-start mb-4">
+                      <img src="dist/img/indahkiat-logo.png" alt="Indah Kiat" class="h-12 w-auto rounded object-contain" />
+                    </div>
+                    <div class="flex items-start justify-between mb-3">
+                      <div>
+                        <h4 class="text-lg font-bold text-dark dark:text-white">Officer</h4>
+                        <p class="text-primary font-semibold">PT Indah Kiat Pulp & Paper Tbk</p>
+                      </div>
+                      <span class="px-3 py-1 rounded-full text-xs font-bold bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300">AKTIF</span>
+                    </div>
+                    <p class="text-sm text-secondary dark:text-slate-400 mb-3">Okt 2023 - Saat ini</p>
+                    <p class="text-sm text-secondary dark:text-slate-400 mb-4">Divisi Supply Chain Management</p>
+                    <div class="space-y-2 mb-4">
+                      <p class="text-sm text-secondary dark:text-slate-400">✓ Administration & Documentation Management</p>
+                      <p class="text-sm text-secondary dark:text-slate-400">✓ SAP Business Warehouse (SAP BW) Operation</p>
+                      <p class="text-sm text-secondary dark:text-slate-400">✓ Supply Chain Process Optimization</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded">SAP BW</span>
+                      <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded">Administration</span>
+                      <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded">Supply Chain</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Previous Position 1 -->
+            <div class="timeline-item card-appear" data-timeline-index="2">
+              <div class="flex gap-6">
+                <div class="flex flex-col items-center">
+                  <div class="timeline-dot-pulse timeline-dot-glow h-4 w-4 rounded-full bg-primary" style="animation: dotMoveDown 1s ease-out forwards; --timeline-index: 2;"></div>
+                  <div class="timeline-line h-20 w-1 bg-gradient-to-b from-primary to-transparent mt-2"></div>
+                </div>
+                <div class="flex-grow pb-8">
+                  <div class="rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 hover:shadow-lg transition-all duration-300 neon-card-purple">
+                    <div class="flex justify-start mb-4">
+                      <img src="dist/img/indahkiat-logo.png" alt="Indah Kiat" class="h-12 w-auto rounded object-contain" />
+                    </div>
+                    <div class="flex items-start justify-between mb-3">
+                      <div>
+                        <h4 class="text-lg font-bold text-dark dark:text-white">Operator & QC</h4>
+                        <p class="text-primary font-semibold">PT Indah Kiat Pulp & Paper Tbk</p>
+                      </div>
+                      <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">SELESAI</span>
+                    </div>
+                    <p class="text-sm text-secondary dark:text-slate-400 mb-3">Nov 2020 - Sep 2023 • 2 tahun 11 bulan</p>
+                    <p class="text-sm text-secondary dark:text-slate-400 mb-4">Divisi Supply Chain Management</p>
+                    <div class="space-y-2 mb-4">
+                      <p class="text-sm text-secondary dark:text-slate-400">✓ Forklift Operation & Material Handling</p>
+                      <p class="text-sm text-secondary dark:text-slate-400">✓ Quality Control & Product Verification</p>
+                      <p class="text-sm text-secondary dark:text-slate-400">✓ Safety Standards & 6R 6S Compliance</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded">Forklift</span>
+                      <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded">QC</span>
+                      <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded">Safety First</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Previous Position 2 -->
+            <div class="timeline-item card-appear">
+              <div class="flex gap-6">
+                <div class="flex flex-col items-center">
+                  <div class="timeline-dot-pulse h-4 w-4 rounded-full bg-primary"></div>
+                  <div class="timeline-line hidden h-20 w-1 bg-gradient-to-b from-primary to-transparent mt-2"></div>
+                </div>
+                <div class="flex-grow">
+                  <div class="rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 hover:shadow-lg transition-all duration-300 neon-card-blue">
+                    <div class="flex justify-start mb-4">
+                      <img src="dist/img/indahkiat-logo.png" alt="Indah Kiat" class="h-12 w-auto rounded object-contain" />
+                    </div>
+                    <div class="flex items-start justify-between mb-3">
+                      <div>
+                        <h4 class="text-lg font-bold text-dark dark:text-white">Fresh Graduate Training</h4>
+                        <p class="text-primary font-semibold">PT Indah Kiat Pulp & Paper Tbk</p>
+                      </div>
+                      <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">SELESAI</span>
+                    </div>
+                    <p class="text-sm text-secondary dark:text-slate-400 mb-3">2020 - Nov 2020</p>
+                    <p class="text-sm text-secondary dark:text-slate-400 mb-4">Divisi Supply Chain Management</p>
+                    <div class="space-y-2 mb-4">
+                      <p class="text-sm text-secondary dark:text-slate-400">✓ Onboarding & Company Culture Integration</p>
+                      <p class="text-sm text-secondary dark:text-slate-400">✓ Department Training & Orientation</p>
+                      <p class="text-sm text-secondary dark:text-slate-400">✓ Basic Operations & Safety Certification</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="mt-16 pt-12 border-t border-slate-300 dark:border-slate-700">
+          <h3 class="mb-8 text-2xl font-bold text-dark dark:text-white text-center">Lebih Dekat / Berteman</h3>
+          <p class="mb-8 text-center text-base font-medium text-secondary lg:text-lg max-w-2xl mx-auto">
+            Mari saling follow dengan klik sosial media dibawah & saya sangat terbuka untuk memulai atau membuat projek baru bersama.
+          </p>
+          <div class="flex items-center justify-center flex-wrap gap-3 animate-in-right">
               <!-- Youtube -->
               <a
                 href="https://youtube.com/@MhankWhyno"
@@ -195,62 +715,140 @@
       </div>
     </section>
     <!-- About Section End -->
-
-    <!-- Portfolio Section Start -->
     <section id="portfolio" class="bg-slate-100 pt-36 pb-16 dark:bg-slate-800">
+      <style>
+        @keyframes portfolioGlow {
+          0%, 100% {
+            filter: drop-shadow(0 0 15px #14b8a6) drop-shadow(0 0 30px rgba(20, 184, 166, 0.4));
+          }
+          50% {
+            filter: drop-shadow(0 0 25px #14b8a6) drop-shadow(0 0 45px rgba(20, 184, 166, 0.6));
+          }
+        }
+        @keyframes cardSlideUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .portfolio-img {
+          animation: portfolioGlow 2.5s ease-in-out infinite;
+        }
+        .portfolio-card {
+          animation: cardSlideUp 0.6s ease-out forwards;
+        }
+        .portfolio-card:nth-child(1) { animation-delay: 0.2s; }
+        .portfolio-card:nth-child(2) { animation-delay: 0.4s; }
+        .portfolio-card:nth-child(3) { animation-delay: 0.6s; }
+        .portfolio-card:nth-child(4) { animation-delay: 0.8s; }
+        .portfolio-card:nth-child(5) { animation-delay: 1s; }
+        .portfolio-card:nth-child(6) { animation-delay: 1.2s; }
+      </style>
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 max-w-xl text-center">
             <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
-            <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Gallery singkat</h2>
+            <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Galeri & Momen Saya</h2>
             <p class="text-md font-medium text-secondary md:text-lg">
-              Saya saat ini tinggal di Serang banten, Asal Banyuwangi Jawa Timur, saya pribadi tidak menyukai hal yang monoton & enjoy dalam menikmati segala yang saya lakukan.
+              Saya saat ini tinggal di Serang Banten, asal Banyuwangi Jawa Timur. Saya tidak menyukai hal monoton dan menikmati setiap yang saya lakukan.
             </p>
           </div>
         </div>
 
-        <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="overflow-hidden rounded-md shadow-md">
-              <img src="dist/img/portfolio/1.png" alt="Landing Page" width="w-full" />
+        <!-- Grid Layout dengan Foto & Cards Terpisah -->
+        <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-full gap-8">
+          <!-- Portfolio Item 1 -->
+          <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] portfolio-card group">
+            <div class="relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 bg-white dark:bg-slate-900 p-6">
+              <div class="relative h-48 mb-4 rounded-lg overflow-hidden">
+                <img src="dist/img/portfolio/1.png" alt="Diri Saya" class="w-full h-full object-cover portfolio-img rounded-lg" />
+              </div>
+              <h3 class="text-xl font-bold text-dark dark:text-white mb-2">🎨 Diri Saya</h3>
+              <p class="text-sm text-secondary dark:text-slate-400 leading-relaxed">Presentase 74% dalam bidang desain. Siap memberikan arahan atau support untuk proyek desain visual. Aktif belajar programming dan terbuka kolaborasi.</p>
+              <div class="mt-4 flex gap-2">
+                <span class="px-3 py-1 text-xs bg-primary/10 text-primary rounded-full">Desain</span>
+                <span class="px-3 py-1 text-xs bg-blue-500/10 text-blue-500 rounded-full">Creative</span>
+              </div>
             </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Diri saya</h3>
-            <fun class="text-base font-medium text-secondary"> saya memiliki presentase 74% dalam bidang desain dan bisa memberikan arahan atau support jika anda ingin membuat sebuah desain dalam kategori tampilan, fun fact saya masih tahap belajar dalam hal programming dan saya berharap bisa belajar bersama atau saya siap jika anda tidak keberatan berbagi ilmu dengan saya dalam kategori apapun.</p>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="overflow-hidden rounded-md shadow-md">
-              <img src="dist/img/portfolio/2.png" alt="E-Commerce" width="w-full" />
+
+          <!-- Portfolio Item 2 -->
+          <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] portfolio-card group">
+            <div class="relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 bg-white dark:bg-slate-900 p-6">
+              <div class="relative h-48 mb-4 rounded-lg overflow-hidden">
+                <img src="dist/img/portfolio/2.png" alt="Koleksi" class="w-full h-full object-cover portfolio-img rounded-lg" />
+              </div>
+              <h3 class="text-xl font-bold text-dark dark:text-white mb-2">📸 Koleksi</h3>
+              <p class="text-sm text-secondary dark:text-slate-400 leading-relaxed">Koleksi momen berharga bersama orang-orang sekitar. Networking profesional dan personal relationships yang bermakna dalam perjalanan karir ini.</p>
+              <div class="mt-4 flex gap-2">
+                <span class="px-3 py-1 text-xs bg-purple-500/10 text-purple-500 rounded-full">Memories</span>
+                <span class="px-3 py-1 text-xs bg-pink-500/10 text-pink-500 rounded-full">People</span>
+              </div>
             </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Koleksi</h3>
-            <p class="text-base font-medium text-secondary">Koleksi utama saya dengan orang-orang disekitar.</p>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="overflow-hidden rounded-md shadow-md">
-              <img src="dist/img/portfolio/3.png" alt="Technical Documentation" width="w-full" />
+
+          <!-- Portfolio Item 3 -->
+          <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] portfolio-card group">
+            <div class="relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 bg-white dark:bg-slate-900 p-6">
+              <div class="relative h-48 mb-4 rounded-lg overflow-hidden">
+                <img src="dist/img/portfolio/3.png" alt="Aktivitas" class="w-full h-full object-cover portfolio-img rounded-lg" />
+              </div>
+              <h3 class="text-xl font-bold text-dark dark:text-white mb-2">🏔️ Aktivitas</h3>
+              <p class="text-sm text-secondary dark:text-slate-400 leading-relaxed">Menyukai aktivitas outdoor, alam, dan konser dengan musik indie. Work-life balance adalah prioritas untuk menikmati setiap petualangan.</p>
+              <div class="mt-4 flex gap-2">
+                <span class="px-3 py-1 text-xs bg-green-500/10 text-green-500 rounded-full">Outdoor</span>
+                <span class="px-3 py-1 text-xs bg-orange-500/10 text-orange-500 rounded-full">Adventure</span>
+              </div>
             </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Aktivitas</h3>
-            <p class="text-base font-medium text-secondary"> Saya sangat menyukai aktivitas saat berada diluar ruangan, hujan, alam, dan konser dengan musik indie.</p>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="overflow-hidden rounded-md shadow-md">
-              <img src="dist/img/portfolio/4.png" alt="Tribute Page" width="w-full" />
+
+          <!-- Portfolio Item 4 -->
+          <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] portfolio-card group">
+            <div class="relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 bg-white dark:bg-slate-900 p-6">
+              <div class="relative h-48 mb-4 rounded-lg overflow-hidden">
+                <img src="dist/img/portfolio/4.png" alt="Pekerjaan" class="w-full h-full object-cover portfolio-img rounded-lg" />
+              </div>
+              <h3 class="text-xl font-bold text-dark dark:text-white mb-2">💼 Pekerjaan</h3>
+              <p class="text-sm text-secondary dark:text-slate-400 leading-relaxed">Bekerja dengan prinsip 6R & 6S Safety First. Detail-oriented dan memastikan quality control dalam setiap aspek pekerjaan profesional.</p>
+              <div class="mt-4 flex gap-2">
+                <span class="px-3 py-1 text-xs bg-red-500/10 text-red-500 rounded-full">Professional</span>
+                <span class="px-3 py-1 text-xs bg-yellow-500/10 text-yellow-500 rounded-full">Discipline</span>
+              </div>
             </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Pekerjaan</h3>
-            <p class="text-base font-medium text-secondary">Bekerja dengan prinsip 6R & 6S safety first dan jangan lupa sempatkan waktu luang dalam waktu satu minggu bekerja.</p>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="overflow-hidden rounded-md shadow-md">
-              <img src="dist/img/portfolio/5.png" alt="Tribute Page" width="w-full" />
+
+          <!-- Portfolio Item 5 -->
+          <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] portfolio-card group">
+            <div class="relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 bg-white dark:bg-slate-900 p-6">
+              <div class="relative h-48 mb-4 rounded-lg overflow-hidden">
+                <img src="dist/img/portfolio/5.png" alt="Hobi" class="w-full h-full object-cover portfolio-img rounded-lg" />
+              </div>
+              <h3 class="text-xl font-bold text-dark dark:text-white mb-2">✈️ Hobi</h3>
+              <p class="text-sm text-secondary dark:text-slate-400 leading-relaxed">Traveling adalah passion utama saya. Fascinated dengan budaya Jepang dan everything yang berkaitan. Selalu mencari pengalaman baru di setiap perjalanan.</p>
+              <div class="mt-4 flex gap-2">
+                <span class="px-3 py-1 text-xs bg-indigo-500/10 text-indigo-500 rounded-full">Travel</span>
+                <span class="px-3 py-1 text-xs bg-cyan-500/10 text-cyan-500 rounded-full">Japan</span>
+              </div>
             </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Hobi</h3>
-            <p class="text-base font-medium text-secondary">Traveling merupakan hobi yang saya miliki, dan sesuatu yang berkaitan dengan Jepang bagi saya adalah hal yang menarik.</p>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="overflow-hidden rounded-md shadow-md">
-              <img src="dist/img/portfolio/6.png" alt="Tribute Page" width="w-full" />
+
+          <!-- Portfolio Item 6 -->
+          <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] portfolio-card group">
+            <div class="relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 bg-white dark:bg-slate-900 p-6">
+              <div class="relative h-48 mb-4 rounded-lg overflow-hidden">
+                <img src="dist/img/portfolio/6.png" alt="Penutup" class="w-full h-full object-cover portfolio-img rounded-lg" />
+              </div>
+              <h3 class="text-xl font-bold text-dark dark:text-white mb-2">🤝 Mari Kolaborasi</h3>
+              <p class="text-sm text-secondary dark:text-slate-400 leading-relaxed">Buka untuk diskusi lebih detail dan opportunity baru. Hubungi via sosial media atau email untuk memulai project bersama yang amazing!</p>
+              <div class="mt-4 flex gap-2">
+                <span class="px-3 py-1 text-xs bg-primary/10 text-primary rounded-full">Collaboration</span>
+                <span class="px-3 py-1 text-xs bg-lime-500/10 text-lime-500 rounded-full">Connect</span>
+              </div>
             </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Penutup</h3>
-            <p class="text-base font-medium text-secondary">Singkat saja dari saya jika ada pertanyaan atau ingin lebih detail bisa dengan follow saya pada sosial media yang dicantumkan atau kirim pesan email pada bagian paling bawah secara langsung.</p>
           </div>
         </div>
       </div>
@@ -305,15 +903,15 @@
           <div class="w-full lg:mx-auto lg:w-2/3">
             <div class="mb-8 w-full px-4">
               <label for="name" class="text-base font-bold text-primary">Nama</label>
-              <input type="text" id="name" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+              <input type="text" id="name" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary textbox-neon" />
             </div>
             <div class="mb-8 w-full px-4">
               <label for="email" class="text-base font-bold text-primary">Email</label>
-              <input type="email" id="email" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+              <input type="email" id="email" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary textbox-neon" />
             </div>
             <div class="mb-8 w-full px-4">
               <label for="message" class="text-base font-bold text-primary">Pesan</label>
-              <textarea type="email" id="email" class="h-32 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
+              <textarea type="email" id="email" class="h-32 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary textbox-neon"></textarea>
             </div>
             <div class="w-full px-4">
               <button herf="mailto:arwhyno27@gmail.com"
@@ -334,7 +932,7 @@
             <h3 class="mb-2 text-2xl font-bold">Hubungi Saya</h3>
             <a href="mailto:arwhyno27@gmail.com"
             target="_blank"
-            class="font-semibold">📩 arwhyno27@gmail.com</a>
+            class="font-semibold">📩 winoajiepradana@gmail.com</a>
             <a href="https://t.me/winuajiepradana"
             target="_blank"
             class="font-semibold"><p>🚀 https://t.me/winuajiepradana</p></a>
@@ -395,7 +993,7 @@
 
             <!-- Instagram -->
             <a
-              href="https://instagram.com/m.winuajiepradana"
+              href="https://instagram.com/winoajp"
               target="_blank"
               class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
             >
@@ -423,7 +1021,7 @@
 
             <!-- TikTok -->
             <a
-              href="https://tiktok.com/@user270520023456789"
+              href="https://tiktok.com/@winoajp"
               target="_blank"
               class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
             >
@@ -437,7 +1035,7 @@
 
             <!-- LinkedIn -->
             <a
-              href="https://www.linkedin.com/in/muhammad-arwino-ajie-pradana-b08a40256"
+              href="https://www.linkedin.com/in/muhammad-arwino-ajie-pradana-98184a395 "
               target="_blank"
               class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
             >
@@ -450,7 +1048,7 @@
             </a>
           </div>
           <p class="text-center text-xs font-medium text-slate-500">
-            © 2024 oleh <a href="https://instagram.com/m.winuajiepradana "target="_blank" class="font-bold text-primary">Winoajiepradana.  </a>  All rights reserved
+            © 2026 oleh <a href="https://instagram.com/winoajp "target="_blank" class="font-bold text-primary">Winoajiepradana.  </a>  All rights reserved
           </p>
         </div>
       </div>
